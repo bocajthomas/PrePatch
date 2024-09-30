@@ -94,13 +94,9 @@ jobs:
           format: markdown
           message: |
             *New Snapchat PrePatch!*
-            *${{ env.SHORTVERSION }}* 
-            
-            *How To Download:*
-            *1. Press the "Direct Download Link"*
-            *2. Wait for the download to finish*
-            *3. Press the download notification*
-            *4. Press ether "Install" or "Update"*
-            
+            *${{ env.SHORTVERSION }}*
+
+            *From current tests, this version is not detected*
+
             *Direct Download Link:*
             https://github.com/SE-Extended/PrePatch/releases/download/${{ env.VERSION }}/${{ env.VERSION }}-PrePatch.apk
