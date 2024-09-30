@@ -71,7 +71,7 @@ jobs:
           RELEASE_VERSION=${{ env.VERSION }}
           if curl -s -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" https://api.github.com/repos/${{ github.repository }}/releases/tags/$RELEASE_VERSION &> /dev/null; then
             RELEASE_VERSION=$(echo $RELEASE_VERSION | awk -F. '{$NF = $NF + 1;} 1' | sed 's/ /./')
-            echo "RELEASE_EXIST=yes" >> $GITHUB_OUTPUT 
+            echo "RELEASE_EXIST=no" >> $GITHUB_OUTPUT 
           else
             echo "RELEASE_EXIST=no" >> $GITHUB_OUTPUT
           fi
